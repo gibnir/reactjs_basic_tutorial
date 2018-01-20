@@ -1,4 +1,4 @@
-# debugging-react-example
+# react-example
 
 Code examples from Egghead.io course: Start Learning React
 https://egghead.io/courses/start-learning-react
