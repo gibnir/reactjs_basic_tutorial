@@ -1,0 +1,46 @@
+Use React.cloneElement to Extend Functionality of Children Components
+==============================================
+We can utilize React.cloneElement in order to create new components with extended data or functionality.
+
+
+more from :
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+=============================================================
+
+Using map generically
+This example shows how to use map on a String to get an array of bytes in the ASCII encoding representing the character values:
+
+var map = Array.prototype.map;
+var a = map.call('Hello World', function(x) { 
+  return x.charCodeAt(0); 
+});
+// a now equals [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+
+Using map generically querySelectorAll
+This example shows how to iterate through a collection of objects collected by querySelectorAll. In this case we get all selected options on the screen and printed on the console:
+
+var elems = document.querySelectorAll('select option:checked');
+var values = Array.prototype.map.call(elems, function(obj) {
+  return obj.value;
+});
+Easier way would be using Array.from() method.
+
+
+more from:
+https://reactjs.org/docs/react-api.html
+=========================
+
+cloneElement()
+React.cloneElement(
+  element,
+  [props],
+  [...children]
+)
+Clone and return a new React element using element as the starting point. The resulting element will have the original element’s props with the new props merged in shallowly. New children will replace existing children. key and ref from the original element will be preserved.
+
+React.cloneElement() is almost equivalent to:
+
+<element.type {...element.props} {...props}>{children}</element.type>
+However, it also preserves refs. This means that if you get a child with a ref on it, you won’t accidentally steal it from your ancestor. You will get the same ref attached to your new element.
+
+This API was introduced as a replacement of the deprecated React.addons.cloneWithProps().

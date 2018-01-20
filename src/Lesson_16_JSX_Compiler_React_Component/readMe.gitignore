@@ -1,0 +1,4 @@
+Build a JSX Live Compiler as a React Component
+===============================
+As a tool for future lessons, we want to have the ability to write JSX and see the output live in the browser.
+In this lesson we will use React to build our own live JSX compiler.

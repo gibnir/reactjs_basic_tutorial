@@ -1,0 +1,4 @@
+Compose React Component Behavior with Higher Order Components
+============================================
+Higher order components will allow you to apply behaviors to multiple React components.
+This can be done by passing the state and any functions into components as props.

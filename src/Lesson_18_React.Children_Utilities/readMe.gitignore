@@ -1,0 +1,4 @@
+Understand React.Children Utilities
+======================
+The data contained in this.props.children is not always what you might expect.
+React provides React.children to allow for a more consistent development experience.
